@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       
-      <IpAdd ipAdd={ipAdd} location={ipAdd.location} />
+      <IpAdd ipAdd={ipAdd} /* country={ipAdd.location.country} region={ipAdd.location.region} */ />
 
       <IpMap />
 

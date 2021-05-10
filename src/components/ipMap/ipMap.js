@@ -6,7 +6,7 @@ import './ipMap.css';
 export default function IpMap ()  {
     
 return (
-    <div id="mapid">    
+   
         <MapContainer className='map-container' center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
             <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -19,6 +19,6 @@ return (
             </Popup>
             </Marker>
         </MapContainer>
-    </div>
+    
     )
 }
