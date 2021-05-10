@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import axios from  'axios'; 
 import './App.css';
+import IpAdd from './components/ipAdd/ipAdd';
+import IpMap from './components/ipMap/ipMap';
+
 
 function App() {
+  const [ipAdd, setIpAdd] = useState ("")
+
+  useEffect(() => {
+    
+    async function getIp() {
+      try {
+           axios.get(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_IP_KEY}&ipAddress=8.8.8.8`)
+          .then(
+            (response) => { 
+            const data = response.data;
+            setIpAdd(data);
+            }
+          );
+  } catch(error) {
+      
+      alert ('fatal error')}
+    }
+
+    getIp();
+    
+
+  },[])     
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <IpAdd ipAdd={ipAdd} location={ipAdd.location} />
+
+      <IpMap />
+
     </div>
   );
 }
