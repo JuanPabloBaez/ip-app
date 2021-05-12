@@ -1,11 +1,14 @@
 import React from 'react';
 
-export default function IpAdd ({ipAdd, country, region }) {
-    console.log(ipAdd)
+
+export default function IpAdd ({ipAdd, country, region, flagLink }) {
+    console.log(flagLink)
     return (
         <div>
-            <h1> IP Address {ipAdd.ip}</h1>
-           {/*  <h2>Location: {ipAdd.location.country}, {ipAdd.location.region}  </h2> */}
+            <h1> IP Address {ipAdd}</h1>
+           <h2>Location: {region}, {country}  </h2>
+           <img className="flagPic" src={flagLink} alt="flag" /> 
+           
         </div>
     )
 }
