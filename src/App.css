@@ -1,6 +1,48 @@
 .App {
   text-align: center;
+  
 }
+
+#loading {
+  margin-top: 15%;
+}
+
+#container {
+  
+  height: 80vh;
+  width: 90%;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#card-wrap {
+  width: 30%;
+  height: auto;
+  position: absolute;
+}
+
+#cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iconIP {
+  height: 2.5rem; 
+}
+
+
+#mapid {
+  height: 100%; 
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  
+}
+
 
 .flagPic {
   width: 20%;

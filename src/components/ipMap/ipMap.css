@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-#mapid { 
-    height: 180px;
-}
 
 .leaflet-container {
     width: 100%;
