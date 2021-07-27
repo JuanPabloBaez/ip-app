@@ -1,4 +1,4 @@
-Excersice "What is my ip?"
+Exersice "What is my ip?"
 
 ip-app-five.vercel.app
 
